@@ -1,0 +1,278 @@
+body{
+    margin:0;
+    padding:0;
+}
+.thumbnail-holder{
+  background-color: #d6ecf6;
+  width:100%;
+  height:45vh;
+  position:relative;
+}
+
+.vertical-center{
+    width:100%;
+    display:flex;
+    flex-flow: row;
+    flex-direction: center;
+    justify-content: center;
+}
+
+.thumbnail-button{
+border:solid 2px  #00b4ff;
+width:1vw;
+height:1vw;
+margin-left:3px;
+margin-right: 3px;
+border-radius: 100%;
+z-index:10;
+}
+
+.clicked{
+    background-color: #00b4ff;
+}
+
+.thumbnail-btns{
+    position:absolute;
+    bottom: 10px;
+    left:0px;
+}
+
+.navbar{
+    display:flex;
+    width:70vw;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.header{
+font-family: 'Open Sans', 'Arial';
+margin:0px 0px 5px 0px;
+padding:0;
+display:inline-block;
+}
+
+.thumbnail{
+    height:100%;
+    font-family: 'PT Serif', 'Arial';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+
+.shopNow{
+    display:none;
+}
+
+.thumbnail-img{
+   
+    max-height:42vh;
+    z-index:1;
+
+}
+
+
+.info{
+    display:none;
+}
+
+.noMargin{
+    margin:0;
+    padding:0;
+}
+/* Select all elements with class thumbnail, and then select all elements with class info from previously selected elements that are h1 tag */
+.thumbnail>.info>div>h1{
+    margin:5px 0px 15px 0px;
+    padding:0px;
+}
+
+.thumbnail>.info>div{
+    text-align: left;
+}
+
+.arrows{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.arrow{
+    margin-left:5px;
+    margin-right: 5px;
+    opacity: 0;
+}
+
+.arrow:hover{
+    opacity: 100;
+}
+
+#content{
+
+    position:relative;
+    width:100%;
+
+}
+
+
+.gridLine{
+width:70vw;
+padding-left:15%;
+display:flex;
+flex-wrap: nowrap;
+justify-content: space-between;
+}
+
+article{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-basis: 15%;
+    width: 10vw;
+   /* height: 10vw;*/
+background-color: #f7f7f7;
+margin:0.5vw;
+padding:5px;
+}
+
+.article-first{
+margin-left:-0.5vw;
+}
+
+article>img{
+    max-width:100%;
+    max-height: 80%;
+}
+
+.logo{
+    display:inline-block;
+    width:0.6em;
+    height: 0.6em;
+}
+
+.menu-icon{
+    height:1em;
+    margin:0 10px 0 10px;
+}
+
+
+/*
+.thumbnail-holder::before{
+    content: '';
+    display: inline-block;
+    width: 25vh;
+    height: 25vh;
+    border: solid 4px white;
+    position:absolute;
+    right:22vw;
+    top:25px;
+}
+
+.thumbnail-holder::after{
+    content: '';
+    display: inline-block;
+    width: 25vh;
+    height: 25vh;
+    border: solid 4px white;
+    position:absolute;
+    right:14vw;
+    bottom:25px;
+}*/
+
+.img-div{
+    height:100%;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-div::before{
+    content: '';
+    display: inline-block;
+    width: 25vh;
+    height: 25vh;
+    border: solid 4px white;
+    position:absolute;
+    left:-2vw;
+    top:1.5vh;
+    z-index:0;
+}
+
+.img-div::after{
+    content: '';
+    display: inline-block;
+    width: 25vh;
+    height: 25vh;
+    border: solid 4px white;
+    position:absolute;
+    right:-1vw;
+    bottom:1.5vh;
+    z-index:0;
+}
+
+.unselectable, img{
+    -webkit-user-select: none; /* Safari, Chrome */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE */
+    user-select: none; /* CSS3 */
+    -webkit-user-drag: none;
+     
+}
+
+
+@media only screen and (min-width:620px) {
+    /* For tablets: */
+    .thumbnail-button {
+      border-radius: 0;
+      height:0.3vw;
+    }
+
+    .thumbnail{
+        height:100%;
+        font-family: 'PT Serif', 'Arial';
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+
+       .thumbnail-img{
+   
+        position:relative;
+        max-height:42vh;
+        z-index:1;
+    
+    }
+
+    .shopNow{
+        display:inline-block;
+        background-color: #3399ff;
+        padding:10px 30px;
+        color:white;
+        text-decoration: none;
+    }
+
+    .img-div{
+        height:100%;
+        position:relative;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info{
+        display:block;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    /* For computers/tablets: */
+}
+
+/*everything else - mobile*/
