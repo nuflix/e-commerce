@@ -54,8 +54,44 @@ body{
     width:100%;
     display:flex;
     flex-flow: row;
-    flex-direction: center;
+    align-items: center;
     justify-content: center;
+}
+
+.vertical-left{
+margin-left:0.5vw;
+justify-self: flex-start;
+}
+
+.vertical-right{
+margin-right:0.5vw;
+justify-self: flex-end;
+}
+
+.vertical-right>img{
+    height:24px;
+}
+
+.vertical-right>img:first-child{
+  padding-right: 20px;
+}
+
+.menu-icon:last-child{
+padding-right: 0;
+margin-right: 0;
+}
+
+.justFlex{
+    display: flex;
+    flex-flow:row;
+    justify-content: space-between;
+    align-items: center;
+    width:70vw;
+    height:32px;
+    padding-left:15vw;
+    padding-top:40px;
+    padding-bottom: 20px;
+
 }
 
 .articleDouble{
@@ -139,7 +175,7 @@ display:inline-block;
     opacity: 1;
    width:100%;
    padding:12px;
-   background-color: cornflowerblue;
+   background-color: #3399ff;
    color:white;
    text-align: center;
 }
@@ -222,9 +258,18 @@ display:inline-block;
         padding: 0;
     }
 
+    .line3{
+        display:flex;
+        flex-flow: row;
+        justify-content: center;
+        width:100%;
+        margin:0;
+        padding: 0;
+    }
+
         .gridLine{
             width:70vw;
-            padding-left:15%;
+            padding-left:15vw;
             display:flex;
             flex-wrap: nowrap;
             flex-flow: row;
@@ -246,7 +291,7 @@ display:inline-block;
             }
 
             /*treba kom*/
-            .featured article>img{
+      /*      .featured article>img{
               max-width: 100%;
               height: 10vh;
               width:auto;
@@ -262,7 +307,15 @@ display:inline-block;
                 padding: 25px 5px 5px 5px;
                 align-self: center;
                 justify-self: center;
-              }
+              }*/
+ article>img{
+    max-width: 100%;
+    height: 20vh;
+    width:auto;
+    padding: 25px 5px 5px 5px;
+    align-self: center;
+    justify-self: center;
+ }
 
             .textBelow{
                 width:100%;
@@ -299,6 +352,9 @@ display:inline-block;
 
             .idkText{
                 margin-left:10px;
+                margin-top:10px;
+                margin-bottom: 10px;
+                font-size: 2em;
             }
 
 /*
@@ -360,6 +416,24 @@ display:inline-block;
 }
 
 
+/* New code down here */
+
+.new{
+margin-top:40px;
+}
+
+.blogText article{
+    background-color: inherit;
+    align-self: flex-start;
+}
+
+.brands>.line3{
+    justify-content: space-between;
+}
+
+/* New code up here */
+
+
 @media screen and (max-width: 1279px) {
     /* For tablets: */
  
@@ -383,7 +457,7 @@ display:inline-block;
     
             .gridLine{
                 width:70vw;
-                padding-left:15%;
+                padding-left:15vw;
                 display:flex;
                 flex-wrap: nowrap;
                 flex-flow: column;
