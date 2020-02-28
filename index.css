@@ -431,6 +431,9 @@ margin-top:40px;
     justify-content: space-between;
 }
 
+.brands>.line3>img{
+    margin:0.5vw;
+}
 /* New code up here */
 
 
