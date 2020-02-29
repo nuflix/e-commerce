@@ -104,6 +104,11 @@ margin-right: 0;
     width:50%;
 }
 
+.articleC{
+    width:50%;
+    background-color: initial;
+}
+
   .thumbnail-button{
     border:solid 2px  #00b4ff;
     width:1vw;
@@ -203,6 +208,10 @@ display:inline-block;
     display:flex;
     align-items: center;
     justify-content:space-between;
+}
+
+.arrows-article{
+    display:none;
 }
 
 .arrow{
@@ -310,7 +319,7 @@ display:inline-block;
               }*/
  article>img{
     max-width: 100%;
-    height: 20vh;
+    max-height: 20vh;
     width:auto;
     padding: 25px 5px 5px 5px;
     align-self: center;
@@ -418,6 +427,7 @@ display:inline-block;
 
 /* New code down here */
 
+
 .new{
 margin-top:40px;
 }
@@ -434,12 +444,49 @@ margin-top:40px;
 .brands>.line3>img{
     margin:0.5vw;
 }
+
+.nav{
+    display:flex;
+    flex-flow: row;
+    align-self: stretch;
+    justify-content: center;
+    align-content: center;
+}
+
+  .menu-item {
+    /* these are the flex items */
+    flex: 1;
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left:10px;
+  margin-right:10px;
+  color:#B0B2BB;
+  }
+
+  .menu-item:first-child {
+    /* these are the flex items */
+border-bottom: solid 2px blue;
+padding-top: 2px;
+  }
+
+
 /* New code up here */
 
 
 @media screen and (max-width: 1279px) {
     /* For tablets: */
  
+    .arrows-article{
+        display:block;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .article-hide{
+        display:none;
+    }
+
     .article-first{
         margin:0.5vw;
         }
