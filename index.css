@@ -3,6 +3,17 @@ body{
     padding:0;
 }
 
+#thumbnail2{
+    display:none;
+}
+
+#thumbnail3{
+    display:none;
+}
+
+#thumbnail1{
+    z-index: 100;
+}
 
 .thumbnail{
     height:100%;
@@ -12,6 +23,8 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-left:15vw;
+    z-index: 100;
+    position: relative;
    }
 
    .thumbnail-img{
@@ -56,6 +69,7 @@ body{
     flex-flow: row;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .vertical-left{
@@ -130,6 +144,7 @@ margin-right: 0;
 }
 
 .navbar{
+    position: relative;
     display:flex;
     width:70vw;
     flex-direction: row;
@@ -208,6 +223,7 @@ display:inline-block;
     display:flex;
     align-items: center;
     justify-content:space-between;
+    z-index: 0;
 }
 
 .arrows-article{
@@ -466,10 +482,177 @@ margin-top:40px;
 
   .menu-item:first-child {
     /* these are the flex items */
-border-bottom: solid 2px blue;
+border-bottom: solid 2px #00b4ff;
 padding-top: 2px;
   }
 
+  @media screen and (min-width: 1280px) {
+.menu-item:hover{
+border-bottom: solid 2px #00b4ff;
+}
+  }
+
+    .menu-btn{
+        position:absolute;
+        top:0px;
+        left:10px;
+        height:100%;
+        max-width:40px;
+        min-width: 35px;
+        width:4vw;
+       /* display:flex;*/
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+        display: none;
+    }
+
+    .btn-part{
+background-color: gray;
+width:100%;
+height:20%;
+border-radius: 10px;
+    }
+
+.clickMe{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+}
+
+#search{
+    display:none;
+    padding-left:50px;
+    padding-right:60px;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:40px;
+}
+
+#search>input{
+    border-radius: 25px;
+    height:80%;
+    width:80%;
+}
+
+.vertical-center{
+    min-height:40px;
+}
+
+#preFooter{
+   /*/ width:100%;*/
+    background-color: #f7f7f7;
+    margin-top:80px;
+    padding:30px;
+    text-align: center;
+}
+
+footer>div{
+    background-color: #0a0f2e;
+    padding:40px;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    border-bottom: solid 1px #6f738e;
+}
+
+footer>div>div{
+    color:#6f738e;
+}
+
+footer>div>div>h2{
+    color:white;
+    padding-top:0;
+    margin-top:0;
+}
+
+footer{
+    background-color: #0a0f2e;
+    padding-bottom: 20px;
+}
+/*
+body{
+    overflow-x: hidden;
+}*/
+
+footer>div>div>nav{
+    display:flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    }
+
+    footer>div>div>nav>a{
+text-decoration: none;
+color:inherit;
+        }
+
+#preFooter>h2{
+    padding-bottom:0;
+    margin-bottom: 0;
+}
+#preFooter>p{
+    padding-bottom:5px;
+    margin-bottom: 0;
+    padding-top:5px;
+    margin-top: 0;
+    color:#B0B2BB;
+}
+
+#preFooter{
+    padding-bottom: 60px;
+}
+
+#email{
+height:5vh;
+-webkit-appearance: none;
+border: solid 1px;
+border-color: transparent transparent #B0B2BB transparent;
+padding: 0 15px;
+margin-right:20px;
+display:inline-block;
+min-height: 35px;
+max-height: 50px;
+width:30%;
+min-width: 300px;
+max-width: 400px;
+background-color: inherit;
+}
+
+#subscribe{
+    height:5vh;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    padding: 0 15px;
+    display:inline-block;
+    background-color: #00b4ff;
+    min-height: 35px;
+    max-height: 50px;
+}
+
+.menu-icon{
+    cursor: pointer;
+}
+
+.shopNow{
+    cursor: pointer;
+}
+
+.thumbnail{
+    z-index: 100;
+}
+
+article{
+    cursor: pointer;
+}
+
+.navbar>nav>div{
+    cursor: pointer;
+}
 
 /* New code up here */
 
@@ -533,6 +716,20 @@ padding-top: 2px;
                   max-width: 100%;
                   padding-bottom: 25px;
                 }
+
+.menu-btn{
+    display:flex;
+}
+
+.nav{
+    display:none;
+    flex-flow: column;
+    position: fixed;
+    top:50px;
+    left:5px;
+    z-index:10;
+}
+
 }
 
 @media only screen and (max-width:620px) {
@@ -543,7 +740,12 @@ padding-top: 2px;
     height:1vw;
 }
 .info{
-    display:none;
+   /* display:none;*/
+   color:#00b4ff;
+   z-index: 100;
+   position: absolute;
+   top:20px;
+   left:5px;
 }
 .shopNow{
     display:none;
@@ -552,16 +754,40 @@ padding-top: 2px;
         display:none;
     }
 
-    
+    #icon-menu{
+        display:none;
+        }
+.navbar{
+    align-items: center;
+    justify-content: center;
+}
+
+.arrows{
+    display:none;
+}
+
+#content{
+    display:none;
+}
+
+        .thumbnail-holder{
+            background-color: #d6ecf6;
+            width:100%;
+            display:flex;
+            height:45vh;
+            position:relative;
+          }
 
                 .thumbnail{
                     height:100%;
+                    width:100%;
                     font-family: 'PT Serif', 'Arial';
                     display: flex;
-                    justify-content: center;
                     align-items: center;
-                    text-align: center;
+                    justify-content: center;
+                    margin-left:0;
                    }
+
 
                    .img-div{
                     height:100%;
@@ -570,6 +796,43 @@ padding-top: 2px;
                     justify-content: center;
                     align-items: center;
                 }
+
+                footer>div{
+                    flex-flow: column;
+                    align-items: flex-start;
+                    display:inline-block;
+                    border:0;
+                    padding-bottom:0;
+                    }
+
+                    footer{
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    footer>div>div{
+                        padding-bottom: 20px;
+                        }
+                        
+
+                #search{
+                    display:none;
+                }
+
+                .thumbnail-img{
+
+                  max-width: 50vw;;
+                
+                }
+
+                .img-div::before{
+              display: none;
+                }
+                
+                .img-div::after{
+                   display: none;
+                }
+
 
 }
 
