@@ -337,9 +337,25 @@ display:inline-block;
     max-width: 100%;
     max-height: 20vh;
     width:auto;
-    padding: 25px 5px 5px 5px;
+    padding: 25px 5px 25px 5px;
     align-self: center;
     justify-self: center;
+ }
+
+ article>div>img{
+    max-width: 100%;
+    max-height: 20vh;
+    width:auto;
+    padding: 25px 5px 25px 5px;
+    align-self: center;
+    justify-self: center;
+ }
+
+ #imgDiv{
+     display:flex;
+     justify-content: center;
+     align-content: center;
+     position: relative;
  }
 
             .textBelow{
@@ -630,6 +646,7 @@ background-color: inherit;
     padding: 0 15px;
     display:inline-block;
     background-color: #00b4ff;
+    color:white;
     min-height: 35px;
     max-height: 50px;
 }
