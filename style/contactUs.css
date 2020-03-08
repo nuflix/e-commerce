@@ -3,5 +3,52 @@
     flex-flow: column;
     justify-content: center;
     align-content: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
+    width:80vw;
+    max-width:500px;
+}
+
+
+input[type="text"], input[type="email"]{
+    height:40px;
+    border-radius: 25px;
+    border:1px solid #3399ff;
+    padding-left: 20px;
+}
+
+input[type="text"], input[type="email"], textarea, #content>form>div{
+    margin-bottom: 20px;
+}
+
+textarea{
+    height:150px;
+    border-radius: 25px;
+    border:1px solid #3399ff;
+    padding-left:20px;
+    padding-top:20px;
+}
+
+.pad{
+    padding-bottom: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+#content{
+    /*padding-top:40px;*/
+    padding-bottom:40px;
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+button{
+    flex-grow: 0;
+    align-self: center;
+    background-color: #3399ff;
+    padding:10px 30px;
+    color:white;
+    border:0;
 }

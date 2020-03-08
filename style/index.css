@@ -7,6 +7,10 @@ body{
     color:#00b4ff;
 }
 
+#navBtn{
+    display:none;
+}
+
 #thumbnail2{
     display:none;
 }
@@ -503,7 +507,7 @@ margin-top:40px;
   color:#B0B2BB;
   }
 
-  .menu-item:first-child {
+  .menu-item-selected {
     /* these are the flex items */
 border-bottom: solid 2px #00b4ff;
 padding-top: 2px;
@@ -537,7 +541,7 @@ color:  #00b4ff;
     .menu-btn{
         position:absolute;
         top:0px;
-        left:10px;
+        left:2px;
         height:100%;
         max-width:40px;
         min-width: 35px;
@@ -551,9 +555,9 @@ color:  #00b4ff;
 
     .btn-part{
 background-color: gray;
-width:100%;
-height:20%;
-border-radius: 10px;
+width:90%;
+height:15%;
+border-radius: 25px;
     }
 
 .clickMe{
@@ -881,9 +885,40 @@ opacity: 1;
     display:none;
     flex-flow: column;
     position: fixed;
-    top:50px;
-    left:5px;
+    top:0px;
+    left:0px;
     z-index:10;
+}
+
+.nav>div{
+    padding: 10px 20px 10px 20px;
+    border-bottom:solid 1px lightgray;
+}
+
+#navBtn{
+    display:inline-block;
+    align-self: flex-start;
+    margin-top:5px;
+    margin-left:5px;
+    padding-bottom: 20px;
+}
+
+.navAnimation{
+    width:0px;
+    overflow-x: hidden;
+    display: flex;
+    animation: navAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes navAnimation{
+    0%{
+        width:0px;
+    }
+    100%{
+        width:50vw;
+    }
 }
 
 footer>span{
