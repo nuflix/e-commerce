@@ -30,7 +30,7 @@ body{
 .thumbnail{
     height:100%;
     width:70vw;
-    font-family: 'PT Serif', 'Arial';
+    font-family: 'Roboto', sans-serif;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -163,7 +163,7 @@ margin-right: 0;
 }
 
 .header{
-font-family: 'Open Sans', 'Arial';
+font-family: 'Roboto', sans-serif;
 margin:0px 0px 5px 0.5vw;
 padding:0;
 display:inline-block;
@@ -644,6 +644,7 @@ footer>div>div>nav{
     footer>div>div>nav>a{
 text-decoration: none;
 color:inherit;
+padding-bottom: 12px;
         }
 
 #preFooter>h2{
@@ -985,7 +986,7 @@ footer>span>span{
                 .thumbnail{
                     height:100%;
                     width:100%;
-                    font-family: 'PT Serif', 'Arial';
+                    font-family: 'Roboto', sans-serif;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -1069,6 +1070,7 @@ text-align: center;
 .arrows-article{
     display: none;
 }
+
 }
 
 @media only screen and (max-width:320px) {
@@ -1101,4 +1103,37 @@ text-align: center;
 
 .clickMe{
     cursor: pointer;
+}
+.grayText{
+    color:gray;
+}
+
+.fix{
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 999;
+    background-color: white;
+}
+
+@media screen and (min-width: 620px) {
+
+    .third{
+        max-width:30vw;
+    }
+
+}
+
+.third>p{
+    display:flex;
+    align-self: center;
+}
+
+.third>p>img{
+padding-right:10px;
+}
+
+.third>p>img{
+    max-width:16px;
+    max-height:16px;
 }
